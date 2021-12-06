@@ -11,7 +11,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr v-for="user in users" :key="user.id"> <!--basit bir şekilde id'leri for ile döndürdüm -->
+    <button v-on:click="show" class="btn btn-warning">Get API</button>
+      <tr v-for="user in users" :key="user.id"> <!--basit bir şekilde id'leri for ile döndürdüm -->
       <th scope="row">{{ user.id }}</th>
       <td>{{user.name}}</td>
       <td>{{user.username}}</td>
@@ -22,18 +23,19 @@
 </table>
 </div>
 </template>
-
 <script>
 import axios from 'axios'
 export default {
 data(){
     return{
-        users:null
+        users:null,
     }},
-created: function(){
+  methods:{
+    show: function (){
     axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
         this.users = response.data;
         })
+  }
 }
 }
 </script>
