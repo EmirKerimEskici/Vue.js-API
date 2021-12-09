@@ -13,7 +13,7 @@
   <tbody>
     <button v-on:click="show" class="btn btn-warning">Get API</button>
       <tr v-for="user in users" :key="user.id"> <!--basit bir şekilde id'leri for ile döndürdüm -->
-      <th scope="row">{{ user.id }}</th>
+      <th scope="row"><router-link :to="'/detail/'+user.id">{{user.id}}</router-link></th>
       <td>{{user.name}}</td>
       <td>{{user.username}}</td>
       <td>{{user.email}}</td>
@@ -41,3 +41,4 @@ data(){
 </script>
 <style>
 </style>
+

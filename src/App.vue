@@ -1,16 +1,14 @@
 <template>
-  <div id="App">
+  <div id="app">
   <img alt="Vue logo" src="./assets/api12.jpeg" class="api">
-  <users></users>
+   <router-view></router-view>
   </div>
 </template>
 <script>
-import users from './components/users'
+
 export default {
-  name: 'App',
-  components: {
-    users,
-  }
+  
+  
 }
 </script>
 <style lang="scss">
@@ -25,5 +23,12 @@ export default {
 .api{
   width: 500px;
   margin-bottom: 55px;
+}
+
+.btn{
+  float: left;
+}
+.person{
+  list-style: none;
 }
 </style>

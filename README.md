@@ -15,11 +15,5 @@ npm run serve
 npm run build
 ```
 
-### Axios library setup
-```
-npm install axios
-```
-
-
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
