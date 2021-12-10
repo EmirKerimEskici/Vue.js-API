@@ -20,7 +20,6 @@ export default {
         console.log(this.$route.params.id);
         var userid=this.$route.params.id
         axios.get('https://jsonplaceholder.typicode.com/users/'+userid).then((response) => {
-
         this.users = response.data;
         console.log(this.users);
         })
