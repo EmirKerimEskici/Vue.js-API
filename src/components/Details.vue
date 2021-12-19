@@ -16,7 +16,8 @@ export default {
             users:null
         }
     },
-    mounted(){
+    methods: {
+        init(){
         console.log(this.$route.params.id);
         var userid=this.$route.params.id
         axios.get('https://jsonplaceholder.typicode.com/users/'+userid).then((response) => {
@@ -24,6 +25,10 @@ export default {
         this.users = response.data;
         console.log(this.users);
         })
+        }
+    },
+    mounted(){
+       this.init()
     }
 }
 </script>
