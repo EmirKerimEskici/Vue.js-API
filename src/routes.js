@@ -1,4 +1,4 @@
-import Users from "./components/Users.vue"
+import Users from "./components/users.vue"
 import { createWebHistory, createRouter } from "vue-router";
 import Details from "./components/Details.vue";
 const routes = [
